@@ -1,0 +1,39 @@
+{
+  "name": "webserver",
+  "engines": {
+    "node": "8"
+  },
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src/ --quiet",
+    "dev": "nodemon --inspect=0.0.0.0:9229 src/index.js",
+    "start": "node src/index.js",
+    "test": "mocha"
+  },
+  "author": "Michal Misiarek",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^5.2.2",
+    "got": "^7.1.0",
+    "handlebars": "^4.0.10",
+    "js-yaml": "^3.9.1",
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "koa-views": "^6.0.2"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.12.0",
+    "pre-commit": "^1.2.2",
+    "supertest": "^3.0.0"
+  },
+  "pre-commit": [
+    "lint", "test"
+  ]
+}
