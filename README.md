@@ -8,4 +8,5 @@
 If you want to use it as boilerplate remember about removing reference to this repository:
 ```bash
 $ git remote remove origin
+$ rm -rf .git
 ```
